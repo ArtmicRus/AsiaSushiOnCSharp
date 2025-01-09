@@ -2,7 +2,7 @@
 
 namespace AsiaSushiOnCSharp.Domain.Entity.Promotions
 {
-    internal class Promotion : BaseEntity
+    public class Promotion : BaseEntity
     {
         public Promotion(string name, string description)
         {

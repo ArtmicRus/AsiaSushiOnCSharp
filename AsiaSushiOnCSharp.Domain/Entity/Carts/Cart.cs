@@ -6,7 +6,7 @@ namespace AsiaSushiOnCSharp.Domain.Entity.Carts
     /// <summary>
     /// Корзина пользователя
     /// </summary>
-    internal class Cart : BaseEntity
+    public class Cart : BaseEntity
     {
         public Promotion? Promotion { get; set; }
 

@@ -3,7 +3,7 @@ using AsiaSushiOnCSharp.Domain.Entity.Goods;
 
 namespace AsiaSushiOnCSharp.Domain.Entity.Carts
 {
-    internal class CartItem : BaseEntity
+    public class CartItem : BaseEntity
     {
         public CartItem(Cart cart, Product product)
         {

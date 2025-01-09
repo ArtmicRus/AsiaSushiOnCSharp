@@ -1,8 +1,5 @@
 using AsiaSushiOnCSharp.Application.Interfaces;
-using AsiaSushiOnCSharp.Domain.InterfacesForRepo;
 using AsiaSushiOnCSharp.Persistence;
-using AsiaSushiOnCSharp.Persistence.Repositories;
-using Microsoft.AspNetCore.Connections;
 
 internal class Program
 {
@@ -17,22 +14,7 @@ internal class Program
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
 
-
-        builder.Services.AddDbContext<ApplicationDbContext>((serviceProvider, options) =>
-        {
-            var connectionFactory = serviceProvider.GetRequiredService<IConnectionFactory>();
-
-            options.UseNpgsql(connectionFactory.GetConnection(), npgSqlOptions =>
-            {
-                npgSqlOptions.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName);
-            });
-
-            options.EnableSensitiveDataLogging();
-        });
-
-        // Add to DI контейнер
-        builder.Services.AddTransient<IApplicationDbContext, ApplicationDbContext>;
-        builder.Services.AddTransient<IProductRepository, ProductRepository>;
+        builder.Services.AddTransient<IApplicationDbContext, ApplicationDbContext>();
 
         var app = builder.Build();
 

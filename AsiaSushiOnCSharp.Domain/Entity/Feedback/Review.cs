@@ -3,7 +3,7 @@ using AsiaSushiOnCSharp.Domain.Enums;
 
 namespace AsiaSushiOnCSharp.Domain.Entity.Feedback
 {
-    internal class Review : BaseEntity
+    public class Review : BaseEntity
     {
         public Review() 
         {

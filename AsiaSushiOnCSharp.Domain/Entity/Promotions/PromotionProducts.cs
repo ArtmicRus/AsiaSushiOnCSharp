@@ -3,7 +3,7 @@ using AsiaSushiOnCSharp.Domain.Entity.Goods;
 
 namespace AsiaSushiOnCSharp.Domain.Entity.Promotions
 {
-    internal class PromotionProducts : BaseEntity
+    public class PromotionProducts : BaseEntity
     {
         public PromotionProducts(Promotion promotion, Product product) 
         {

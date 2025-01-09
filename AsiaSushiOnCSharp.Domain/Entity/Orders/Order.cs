@@ -2,7 +2,7 @@
 
 namespace AsiaSushiOnCSharp.Domain.Entity.Orders
 {
-    internal class Order : BaseEntity
+    public class Order : BaseEntity
     {
         public Order() 
         {

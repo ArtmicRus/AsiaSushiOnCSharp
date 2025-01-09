@@ -3,7 +3,7 @@ using AsiaSushiOnCSharp.Domain.Entity.Goods;
 
 namespace AsiaSushiOnCSharp.Domain.Entity.Orders
 {
-    internal class OrderItem : BaseEntity
+    public class OrderItem : BaseEntity
     {
         public OrderItem(Order order, Product product, decimal price)
         {
